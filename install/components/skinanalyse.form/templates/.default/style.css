@@ -1,0 +1,160 @@
+/* skin-analyze.css */
+.skinAnalyze {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto auto auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.skinAnalyze .form-group {
+    margin: 25px 0;
+}
+
+.skinAnalyze input[type="file"] {
+    padding: 12px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.skinAnalyze input[type="file"]:hover {
+    border-color: #4CAF50;
+}
+
+.skinAnalyze .analyze-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.skinAnalyze .analyze-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.skinAnalyze .analyze-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.skinAnalyze .result {
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.skinAnalyze .success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.skinAnalyze .error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.skinAnalyze .prediction {
+    margin: 12px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.skinAnalyze .prediction:hover {
+    transform: translateX(5px);
+}
+
+.skinAnalyze h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skinAnalyze .info {
+    background: #e7f3ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2196F3;
+    line-height: 1.8;
+}
+
+.skinAnalyze .info strong {
+    color: #2196F3;
+    color: #2196F3;
+    font-size: 1.1em;
+}
+
+.skinAnalyze .disclaimer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.skinAnalyze .disclaimer strong {
+    color: #ff9800;
+}
+
+.skinAnalyze .loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.skinAnalyze .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .skinAnalyze {
+        padding: 15px;
+    }
+
+    .skinAnalyze .info {
+        padding: 15px;
+    }
+
+    .skinAnalyze .analyze-btn {
+        width: 100%;
+        padding: 16px;
+    }
+}

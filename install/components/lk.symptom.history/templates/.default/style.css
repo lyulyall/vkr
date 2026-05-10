@@ -1,0 +1,46 @@
+.symptom-history__item-wrap {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.symptom-history__item-wrap:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.symptom-history__card-body {
+    padding: 24px;
+}
+
+.symptom-history__pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.symptom-history__loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.symptom-history__loader-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.symptom-history__loader-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 500;
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}

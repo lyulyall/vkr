@@ -1,0 +1,46 @@
+.symptomAnalyze {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 30px auto auto auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.symptomAnalyze .form-group {
+    margin: 25px 0;
+}
+
+.symptomAnalyze .info {
+    background: #e7f3ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2196F3;
+    line-height: 1.8;
+}
+
+.symptomAnalyze .info strong {
+    color: #2196F3;
+    font-size: 1.1em;
+}
+
+#symptomResult {
+    margin-top: 32px;
+}
+
+#symptomAnalyzeBtn {
+    margin-top: 20px;
+}
+
+.disclaimer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.disclaimer strong {
+    color: #ff9800;
+}
