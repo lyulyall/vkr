@@ -1,6 +1,6 @@
 <?php
 
-namespace vdc\custom\service;
+namespace med\custom\service;
 
 
 use Exception;

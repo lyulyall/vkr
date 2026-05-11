@@ -3,8 +3,8 @@
 use Bitrix\Main\Loader;
 use Bitrix\Main\Web\Json;
 use Bitrix\Main\Web\Uri;
-use med\appointment\entity\skinHistory\SkinHistoryRepository;
-use med\appointment\entity\skinHistory\SkinHistoryService;
+use med\custom\entity\skinHistory\SkinHistoryRepository;
+use med\custom\entity\skinHistory\SkinHistoryService;
 
 defined('B_PROLOG_INCLUDED') || die;
 

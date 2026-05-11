@@ -1,10 +1,10 @@
 <?php
 
-namespace vdc\custom\controller;
+namespace med\custom\controller;
 
 
 use Exception;
-use vdc\custom\service\SkinAnalyseService;
+use med\custom\service\SkinAnalyseService;
 
 
 class SkinAnalyseController {

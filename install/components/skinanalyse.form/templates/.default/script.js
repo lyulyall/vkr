@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const PROXY_URL = 'https://nir--crt-guzenko.ivb24.ru/local/modules/med.appointment/src/entrypoint.php';
+    const AJAX_URL = BX.message('SKIN_HISTORY_AJAX_URL');
+
 
     const form = document.getElementById('skinAnalyzeForm');
     const fileInput = document.getElementById('photoInput');
@@ -45,20 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function checkServer() {
         try {
-            const response = await fetch(PROXY_URL + '?endpoint=/health');
+            const response = await fetch(AJAX_URL + '?action=/health_check');
 
 
             if (!response.ok) {
-                console.error('❌ Ошибка проверки сервера, статус:', response.status);
                 return false;
             }
 
             const data = await response.json();
-            console.log('✅ Сервер доступен:', data);
 
             return true;
         } catch (error) {
-            console.error('❌ Ошибка соединения:', error);
             return false;
         }
     }
@@ -68,17 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formData.set('action', 'skin_analysis');
 
-        const response = await fetch(PROXY_URL + '?action=skin_analysis&endpoint=/upload', {
+        const response = await fetch(AJAX_URL + '?action=skin_analysis&endpoint=/upload', {
             method: 'POST',
             body: formData
         });
 
         const responseText = await response.text();
-
-        console.log('📥 Статус ответа:', response.status);
-        console.log('📥 Заголовки:', Object.fromEntries(response.headers.entries()));
-        console.log('📥 Ответ:', responseText.substring(0, 500));
-
+        
         let result;
 
         try {
@@ -181,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             try {
                 await saveSkinHistory(file, result);
-                console.log('✅ История анализа кожи успешно сохранена');
             } catch (saveError) {
                 console.error('❌ Ошибка сохранения истории анализа кожи:', saveError);
             }
@@ -210,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.append('response', JSON.stringify(result));
         formData.append('iblock_id', BX.message('SKIN_HISTORY_IBLOCK_ID'));
 
-        const response = await fetch(BX.message('SKIN_HISTORY_AJAX_URL'), {
+        const response = await fetch(AJAX_URL, {
             method: 'POST',
             body: formData,
             credentials: 'same-origin'
