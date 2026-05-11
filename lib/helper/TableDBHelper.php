@@ -1,6 +1,6 @@
 <?php
 
-namespace med\appointment\helpers;
+namespace med\custom\helpers;
 
 
 use Bitrix\Main\Application;
